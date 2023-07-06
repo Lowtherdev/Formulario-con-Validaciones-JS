@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Registro</title>
+    <style>
+        /* Estilo general */
+ body {
+    background-color: #222;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Contenedor del formulario */
+  .form-container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #333;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+
+  .form-container h2 {
+    margin-top: 0;
+  }
+
+  /* Campos de entrada */
+  input[type="text"],
+  input[type="email"],
+  input[type="date"],
+  input[type="number"],
+  input[type="range"] {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: #444;
+    color: #fff;
+    margin-bottom: 10px;
+    border-radius: 3px;
+    box-sizing: border-box;
+  }
+
+  input[type="submit"] {
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  input[type="submit"]:hover {
+    background-color: #45a049;
+  }
+    </style>
+</head>
+<body>
+  <div class="form-container">
+    <h2>Registro de Usuario</h2>
+    <form id="registration-form">
+      <fieldset>
+        <legend>Datos Personales</legend>
+        <input type="text" name="nombre" placeholder="Nombre completo" required autofocus>
+        <br><br>
+        <input type="email" name="email" placeholder="Correo electrónico" required>
+        <br><br>
+        <input type="text" name="telefono" placeholder="Teléfono">
+        <br><br>
+        <input type="date" name="fecha_nacimiento" placeholder="Fecha de nacimiento" required>
+      </fieldset>
+      <br>
+      <fieldset>
+        <legend>Dirección</legend>
+        <input type="text" name="direccion" placeholder="Dirección">
+        <br><br>
+        <input type="text" name="ciudad" placeholder="Ciudad" required>
+        <br><br>
+        <input type="text" name="codigo_postal" placeholder="Código Postal">
+      </fieldset>
+      <br>
+      <fieldset>
+        <legend>Otros Datos</legend>
+        <input type="text" name="ocupacion" placeholder="Ocupación">
+        <br><br>
+        <input type="text" name="empresa" placeholder="Empresa">
+        <br><br>
+        <input type="text" name="dni" placeholder="DNI/NIF/NIE" pattern="[0-9]{8}[TRWAGMYFPDXBNJZSQVHLCKE]" title="Introduce un DNI/NIF/NIE válido">
+        <br><br>
+        <input type="number" name="edad" placeholder="Edad" min="18" max="99">
+      </fieldset>
+      <input type="submit" value="Enviar">
+    </form>
+    <div id="output" style="display: none;"></div>
+  </div>
+
+  <script src="script.js"></script>
+  
+</body>
+</html>
